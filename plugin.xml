@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-nowplaying" version="1.0.0">
+
+    <name>NowPlaying</name>
+    <description>Cordova NowPlaying Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,media,audio,video,nowplaying,MPNowPlayingInfoCenter,lockscreen</keywords>
+    <repo>https://github.com/Muntligt/cordova-plugin-nowplaying.git</repo>
+    <issue>https://github.com/Muntligt/cordova-plugin-nowplaying/issues</issue>
+
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
+      
+    <js-module src="www/NowPlaying.js" name="NowPlaying">
+        <clobbers target="window.NowPlaying" />
+    </js-module>
+    
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="NowPlaying">
+                <param name="ios-package" value="MNowPlaying" /> 
+            </feature>
+        </config-file>
+        <header-file src="src/ios/MNowPlaying.h" />
+        <source-file src="src/ios/MNowPlaying.m" />
+    </platform>
+
+</plugin>

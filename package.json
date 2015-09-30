@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-nowplaying",
+  "version": "1.0.0",
+  "description": "Cordova Plugin Now Playing",
+  "main": "src/www/NowPlaying.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muntligt/cordova-plugin-nowplaying.git"
+  },
+  "keywords": [
+    "cordova",
+    "media",
+    "audio",
+    "nowplaying",
+    "MPNowPlayingInfoCenter",
+    "lockscreen"
+  ],
+  "author": "Leon Radley (leon)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Muntligt/cordova-plugin-nowplaying/issues"
+  },
+  "homepage": "https://github.com/Muntligt/cordova-plugin-nowplaying#readme"
+}
