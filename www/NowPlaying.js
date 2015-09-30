@@ -29,3 +29,5 @@ var NowPlaying = {
 		cordova.exec(success, fail, 'NowPlaying', 'setNowPlaying', [JSON.stringify(dict)]);
 	}
 };
+
+module.exports = NowPlaying;
