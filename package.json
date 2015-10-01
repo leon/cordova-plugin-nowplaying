@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-nowplaying",
   "version": "1.0.1",
-  "description": "Cordova Plugin Now Playing",
+  "description": "Cordova Plugin for setting MPNowPlayingInfoCenter.nowPlayingInfo. Only works with > iOS 7.1. Includes support for downloading MPMediaItemPropertyArtwork asynchronously",
   "main": "src/www/NowPlaying.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
