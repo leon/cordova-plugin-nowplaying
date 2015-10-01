@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-nowplaying",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cordova Plugin Now Playing",
   "main": "src/www/NowPlaying.js",
   "scripts": {
@@ -11,7 +11,9 @@
     "url": "git+https://github.com/Muntligt/cordova-plugin-nowplaying.git"
   },
   "keywords": [
+    "ecosystem:cordova",
     "cordova",
+    "cordova-ios",
     "media",
     "audio",
     "nowplaying",
