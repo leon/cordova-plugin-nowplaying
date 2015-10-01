@@ -40,4 +40,18 @@ NowPlaying.set({
 });
 ```
 
+You can call `NowPlaying.set` multiple times to update the keys you send in the object
+
+```javascript
+NowPlaying.set({
+	artwork: "http://www.domain.com/image.png"
+});
+
+setTimeout(function () {
+	NowPlaying.set({
+		chapterNumber: 2
+	});
+}, 1000);
+```
+
 > When using in a browser environment it will simply log the calls to `NowPlaying.set` to the console.
