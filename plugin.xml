@@ -11,20 +11,27 @@
     <engines>
         <engine name="cordova" version=">=3.4.0"/>
     </engines>
-      
+
     <js-module src="www/NowPlaying.js" name="NowPlaying">
         <clobbers target="window.NowPlaying" />
     </js-module>
-    
+
     <!-- ios -->
-    <platform name="ios">    
+    <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="NowPlaying">
-                <param name="ios-package" value="MNowPlaying" /> 
+                <param name="ios-package" value="MNowPlaying" />
             </feature>
         </config-file>
         <header-file src="src/ios/MNowPlaying.h" />
         <source-file src="src/ios/MNowPlaying.m" />
+    </platform>
+
+    <!-- browser -->
+    <platform name="browser">
+        <js-module src="src/browser/MNowPlaying.js" name="MNowPlaying">
+            <clobbers target="window.NowPlaying" />
+        </js-module>
     </platform>
 
 </plugin>
