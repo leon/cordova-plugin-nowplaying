@@ -27,7 +27,7 @@
 var NowPlaying = {
 	set: function setNowPlaying(dict, success, fail) {
 		cordova.exec(success, fail, 'NowPlaying', 'setNowPlaying', [JSON.stringify(dict)]);
-	}
+	},
   registerRemoteEvents: function(actionCallback) {
     this.actionCallback = actionCallback;
   },
