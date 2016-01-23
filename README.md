@@ -9,9 +9,6 @@ https://developer.apple.com/library/prerelease/ios/documentation/MediaPlayer/Ref
 cordova plugin add cordova-plugin-nowplaying
 ```
 
-Requires linking of `MediaPlayer.framework`
-> XCode project settings under `General` -> `Linked Framework and Libraries`
-
 # Use
 
 > Use only the keys that you have available and leave the others out of the javascript object, that way only the correct keys will be sent to the MPNowPlayingInfoCenter.nowPlayingInfo
@@ -55,3 +52,22 @@ setTimeout(function () {
 ```
 
 > When using in a browser environment it will simply log the calls to `NowPlaying.set` to the console.
+
+## Hook up play / pause buttons
+
+Use `NowPlaying.registerRemoteEvents()` to hook up the play / pause button on idle-screen to your media-player:
+
+```javascript
+NowPlaying.registerRemoteEvents( function(action) {
+  switch(action) {
+    case 'play':
+      // Call play on your media-instanse
+      mymedia.play();
+      break;
+    case 'pause':
+      // Call pause on your media-instanse
+      mymedia.pause();
+      break;
+  }
+});
+```
