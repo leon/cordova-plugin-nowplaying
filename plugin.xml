@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-nowplaying" version="1.0.0">
-
+<plugin
+  xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-nowplaying"
+  version="1.0.3"
+>
     <name>NowPlaying</name>
     <description>Cordova NowPlaying Plugin</description>
     <license>Apache 2.0</license>
@@ -25,6 +29,7 @@
         </config-file>
         <header-file src="src/ios/MNowPlaying.h" />
         <source-file src="src/ios/MNowPlaying.m" />
+        <framework src="MediaPlayer.framework" weak="true" />
     </platform>
 
     <!-- browser -->

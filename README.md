@@ -9,9 +9,6 @@ https://developer.apple.com/library/prerelease/ios/documentation/MediaPlayer/Ref
 cordova plugin add cordova-plugin-nowplaying
 ```
 
-Requires linking of `MediaPlayer.framework`
-> XCode project settings under `General` -> `Linked Framework and Libraries`
-
 # Use
 
 > Use only the keys that you have available and leave the others out of the javascript object, that way only the correct keys will be sent to the MPNowPlayingInfoCenter.nowPlayingInfo
