@@ -3,6 +3,10 @@ Allows setting the lock screen information such as artist, title, and artwork.
 
 https://developer.apple.com/library/prerelease/ios/documentation/MediaPlayer/Reference/MPNowPlayingInfoCenter_Class/index.html
 
+This plugin has a sibling plugin that allows you to handle remote commands, check it out!
+
+https://github.com/Muntligt/cordova-plugin-remotecommand
+
 # Install
 
 ```bash
