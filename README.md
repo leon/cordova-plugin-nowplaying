@@ -5,7 +5,7 @@ https://developer.apple.com/library/prerelease/ios/documentation/MediaPlayer/Ref
 
 This plugin has a sibling plugin that allows you to handle remote commands, check it out!
 
-https://github.com/Muntligt/cordova-plugin-remotecommand
+https://github.com/leon/cordova-plugin-remotecommand
 
 # Install
 
