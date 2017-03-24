@@ -56,3 +56,22 @@ setTimeout(function () {
 ```
 
 > When using in a browser environment it will simply log the calls to `NowPlaying.set` to the console.
+
+## Hook up play / pause buttons
+
+Use `NowPlaying.registerRemoteEvents()` to hook up the play / pause button on idle-screen to your media-player:
+
+```javascript
+NowPlaying.registerRemoteEvents( function(action) {
+  switch(action) {
+    case 'play':
+      // Call play on your media-instanse
+      mymedia.play();
+      break;
+    case 'pause':
+      // Call pause on your media-instanse
+      mymedia.pause();
+      break;
+  }
+});
+```

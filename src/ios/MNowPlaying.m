@@ -5,6 +5,21 @@
 - (void)pluginInitialize
 {
     NSLog(@"NowPlaying plugin init.");
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    
+    MPRemoteCommandCenter *commandCenter = [MPRemoteCommandCenter sharedCommandCenter];
+    commandCenter.nextTrackCommand.enabled = NO;
+    commandCenter.previousTrackCommand.enabled = NO;
+    
+    [commandCenter.pauseCommand addTargetWithHandler:^MPRemoteCommandHandlerStatus(MPRemoteCommandEvent *event) {
+        [self.commandDelegate evalJs:@"cordova.require('cordova-plugin-nowplaying.NowPlaying').remotePlayerPause()"];
+        return MPRemoteCommandHandlerStatusSuccess;
+    } ];
+    
+    [commandCenter.playCommand addTargetWithHandler:^MPRemoteCommandHandlerStatus(MPRemoteCommandEvent *event) {
+        [self.commandDelegate evalJs:@"cordova.require('cordova-plugin-nowplaying.NowPlaying').remotePlayerPlay()"];
+        return MPRemoteCommandHandlerStatusSuccess;
+    } ];
 }
 
 /**
